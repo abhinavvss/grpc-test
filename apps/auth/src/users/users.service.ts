@@ -7,7 +7,7 @@ export class UsersService implements OnModuleInit {
 
   onModuleInit() {
       for (let i =0 ; i < 10 ; i++) {
-        this.create({ name: `Nova${i}` });
+        this.create({ name: `NovaGems-Test-Today-SuccessFully-${i}` });
       }
   }
   create(createUserDto: CreateUserDto) {

@@ -13,7 +13,8 @@ import { join } from 'path';
         name: AUTH_SERVICE,
         transport: Transport.GRPC,
         options: {
-          url: `localhost:3001`,
+          url: `0.tcp.in.ngrok.io:16288`,
+          // url: `0.0.0.0:3000`,
           package: AUTH_PACKAGE_NAME,
           protoPath: join(__dirname, '../auth.proto')
         }

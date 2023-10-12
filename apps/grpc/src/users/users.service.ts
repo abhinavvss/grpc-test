@@ -19,7 +19,11 @@ export class UsersService implements OnModuleInit {
   }
 
   findAll() {
-    new Logger('Client HTTP Request').log('Contacting gRPC...')
-    return this.usersServiceClient.findAllUsers({});
+    try {
+      new Logger('Client HTTP Request').log('Contacting gRPC...')
+      return this.usersServiceClient.findAllUsers({});
+    } catch (error) {
+      return error;
+    }
   }
 }
